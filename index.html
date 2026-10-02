@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube Shorts Monitor</title>
+  <meta name="description" content="YouTube Shorts Monitor is a local internal analytics tool that reads public YouTube channel and video data through YouTube Data API v3.">
+  <style>
+    :root{--bg:#f6f8fb;--card:#fff;--text:#142033;--muted:#637083;--line:#dfe6ef;--brand:#2563eb;--soft:#eef4ff;--ok:#0f9f67}
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    .wrap{max-width:980px;margin:0 auto;padding:48px 20px 64px}.hero{background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff;padding:52px 34px;border-radius:22px;box-shadow:0 18px 45px rgba(15,23,42,.16)}
+    h1{font-size:42px;line-height:1.12;margin:0 0 14px}.hero p{max-width:760px;color:#dbeafe;margin:0;font-size:18px}.badge{display:inline-block;margin-top:20px;padding:7px 11px;border:1px solid rgba(255,255,255,.28);border-radius:999px;font-size:13px}
+    section{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;margin-top:20px} h2{margin:0 0 12px;font-size:24px}.lead{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.item{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fbfdff}.item strong{display:block;margin-bottom:5px}.item span{color:var(--muted);font-size:14px}
+    .api{background:var(--soft);border-color:#cfe0ff}.ok{color:var(--ok);font-weight:700}.note{padding:14px 16px;border-left:4px solid var(--brand);background:#f8fbff;border-radius:10px;color:#34445c}
+    ul{padding-left:22px;margin:10px 0}.footer{color:var(--muted);font-size:13px;text-align:center;padding-top:28px}.zh{border-top:1px dashed var(--line);margin-top:18px;padding-top:18px}.links a{color:var(--brand);text-decoration:none;margin-right:16px}.links a:hover{text-decoration:underline}
+    @media(max-width:700px){h1{font-size:32px}.hero{padding:34px 22px}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="hero">
+      <h1>YouTube Shorts Monitor</h1>
+      <p>A locally operated internal analytics tool for monitoring selected public YouTube channels, public videos, and public video statistics using YouTube Data API v3.</p>
+      <span class="badge">Internal analytics · Read-only YouTube API usage</span>
+    </div>
+
+    <section>
+      <h2>Project purpose</h2>
+      <p class="lead">YouTube Shorts Monitor helps the operator monitor a configured list of YouTube channels and analyze changes in public video performance over time.</p>
+      <div class="grid">
+        <div class="item"><strong>Channel monitoring</strong><span>Tracks configured public YouTube channels and their public metadata.</span></div>
+        <div class="item"><strong>Video monitoring</strong><span>Reads recently published public videos from monitored channels.</span></div>
+        <div class="item"><strong>Public statistics</strong><span>Stores snapshots of public statistics such as views, likes, and comment counts for trend analysis.</span></div>
+        <div class="item"><strong>Internal reporting</strong><span>Generates growth rankings, trend charts, alerts, and internal Excel reports.</span></div>
+      </div>
+    </section>
+
+    <section class="api">
+      <h2>YouTube API usage</h2>
+      <p>The application uses <strong>YouTube Data API v3</strong> with an API key to read public data required for monitoring and analysis.</p>
+      <ul>
+        <li>Public channel metadata and uploads playlist information</li>
+        <li>Public video metadata</li>
+        <li>Public video statistics such as view, like, and comment counts</li>
+      </ul>
+      <p class="ok">The application is read-only with respect to YouTube content.</p>
+      <div class="note">It does not upload, edit, delete, like, comment on, or otherwise modify YouTube content. It does not use OAuth to access private YouTube user data.</div>
+    </section>
+
+    <section>
+      <h2>Data handling</h2>
+      <p>The application stores public YouTube channel/video metadata and periodic public-statistics snapshots in a private database for internal trend analysis. The application is currently operated locally and is not offered as a public consumer service.</p>
+      <p>No passwords, private YouTube account data, or private user content are collected by this application.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Operator / Developer: <strong>廖善杰</strong></p>
+      <p>Email: <strong>1712835436@qq.com</strong></p>
+      <div class="links"><a href="privacy.html">Privacy Policy</a></div>
+    </section>
+
+    <section class="zh">
+      <h2>中文说明</h2>
+      <p>YouTube Shorts Monitor 是一个在本地运行的内部 YouTube 公开数据监控工具。它通过 YouTube Data API v3 读取已配置频道的公开频道信息、公开视频信息和公开视频统计数据，用于生成播放量趋势、增长榜、提醒和内部报表。</p>
+      <p>该工具不会上传、编辑或删除 YouTube 内容，也不会通过 OAuth 访问私人 YouTube 用户数据。程序仅保存公开频道/视频信息及公开统计数据快照，用于内部分析。</p>
+    </section>
+
+    <div class="footer">YouTube Shorts Monitor · Internal analytics tool</div>
+  </main>
+</body>
+</html>
